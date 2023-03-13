@@ -1,0 +1,134 @@
+*{box-sizing: border-box;margin:0;padding:0;}article,aside,blockquote,div,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hr,legend,main,nav,pre,q,section{display:block;}body,html{font-size:16px;line-height:1;}button,input,select,textarea{display:inline;font-size:1em;zoom:1;}a,abbr,br,code,i,kbd,label,span,sub,sup{display:inline;}abbr,fieldset,img{border:none;}caption,code,i,kbd,th{font-style:normal;font-weight:normal;text-decoration:none;}caption{display:table-caption;}code{font-size:1em;}col{display:table-column;}colgroup{display:table-column-group;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:700;}input,select{vertical-align:middle;}li{display:list-item;}ol,ul{list-style:none;}sub{vertical-align:sub;}sup{vertical-align:super;}table{display:table;border-collapse:collapse;border-spacing:0;}tbody{display:table-row-group;}td,th{display:table-cell;}tfoot{display:table-footer-group;}thead{display:table-header-group;}tr{display:table-row;}
+body {
+	background: #f0f0f0;
+	color: #292929;
+	font-family: "Segoe UI", Verdana, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.75;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.25em;
+}
+footer {
+	background: #212121;
+	color: #f0f0f0;
+	padding: 8em;
+	text-align: center;
+}
+header {
+	color: #292929;
+	margin: 2em 1.5%;
+	text-align: center;
+}
+main {
+	overflow: hidden;
+	padding: 1.5%;
+}
+section {
+	background: #e3e3e3;
+	border: 4px solid rgba(0, 0, 0, 0.15);
+	color: #292929;
+	margin: 1.5%;
+	padding: 6em 2em 2em 2em;
+	position: relative;
+	/*width: auto;*/
+}
+section:nth-of-type(1) {
+	margin-top: 0;
+}
+section:nth-of-type(1) .name {
+	background: #c16b5c;
+}
+section:nth-of-type(2) {
+	margin: 3% 1.5%;
+}
+section:nth-of-type(2) .name {
+	background: #7b5647;
+}
+section:nth-of-type(3) .name {
+	background: #1d916e;
+}
+
+
+.column-span-1 {
+	width: auto;
+}
+.name {
+	border: 4px solid rgba(0, 0, 0, 0.15);
+	color: #f0f0f0;
+	padding: 0.5em 1em;
+	position: absolute;
+	right: -4px;
+	top: -4px;
+}
+
+
+@media (min-width: 768px) {
+	section:nth-of-type(1),
+	section:nth-of-type(2) {
+		margin-top: 0;
+	}
+	section:nth-of-type(2) {
+		margin: 0 1.5% 1.5% 1.5%;
+	}
+	.column-span-1 {
+		float: left;
+		width: 47%;
+	}
+	.column-span-3 {
+		width: 97%;
+	}
+}
+
+
+@media (min-width: 992px) {
+	section {
+		margin-top: 0;
+	}
+	.column-span-1,
+	.column-span-3 {
+		width: 30.333%;
+	}
+}
+
+
+
+
+/* --------------------------------------------------
+All declarations here are used by the other HTML file
+which shows how to achieve this layout using modern
+CSS3 layout options (much easier!)
+-------------------------------------------------- */
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 2em;
+	padding: 2em;
+}
+.flex-item {
+	margin: 0 !important;
+}
+
+
+@media (min-width: 768px) {
+	.flex-item {
+		margin: 0 !important;
+	}
+	.flex-item:nth-of-type(1),
+	.flex-item:nth-of-type(2) {
+		flex: 1;
+	}
+}
+
+
+@media (min-width: 992px) {
+	.flex {
+		flex-wrap: nowrap;
+	}
+	.flex-item {
+		flex: 1;
+	}
+}
