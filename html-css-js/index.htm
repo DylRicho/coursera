@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="Dylan Richards" name="author">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>Coursera: HTML, CSS and JavaScript for Web Developers</title>
+	<link href="https://fonts.googleapis.com" rel="preconnect">
+	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+	<link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Questrial&display=swap" rel="stylesheet">
+	<link href="assets/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>
+		<h1>Coursera</h1>
+		<div>HTML, CSS and JavaScript for Web Developers</div>
+		<nav>
+			<a href="#module-2">Module 2</a>
+			<div>Module 3</div>
+			<div>Module 4</div>
+			<div>Module 5</div>
+		</nav>
+	</header>
+	<main id="main">
+		 <section id="module-2">
+		 	<h2>Module 2</h2>
+		 	<ul>
+		 		<li><a href="module-2/index.htm" target="_self" title='"Our Menu" solution'>"Our Menu" solution</a></li>
+		 		<li><a href="module-2/modern-solution.htm" target="_self" title="Modern alternative solution with CSS flexbox">Modern alternative solution with CSS flexbox</a></li>
+		 	</ul>
+		 </section>
+		 <section id="module-3">
+		 	<h2>Module 3</h2>
+		 	<p>Nothing to see here.</p>
+		 </section>
+		 <section id="module-4">
+		 	<h2>Module 4</h2>
+		 	<p>Nothing to see here.</p>
+		 </section>
+		 <section id="module-5">
+		 	<h2>Module 5</h2>
+		 	<p>Nothing to see here.</p>
+		 </section>
+	</main>
+	<footer>
+		<p>Repository created for Coursera course by Yaakov Chaikin.</p>
+	</footer>
+	<script>
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+		    anchor.addEventListener('click', function (e) {
+		        e.preventDefault();
+
+		        document.querySelector(this.getAttribute('href')).scrollIntoView({
+		            behavior: 'smooth'
+		        });
+		    });
+		});
+	</script>
+</body>
+</html>
